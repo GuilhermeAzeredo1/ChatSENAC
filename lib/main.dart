@@ -7,14 +7,10 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false, // Tópico 2: Remove a faixa de debug
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        body: SafeArea(child: Login()),
-      ),
-    );
+    return MaterialApp(home: Login());
   }
 }
