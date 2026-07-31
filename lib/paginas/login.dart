@@ -1,8 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app/paginas/cadastro.dart';
+import 'package:primeiro_app/paginas/dashboard.dart';
 import 'package:primeiro_app/utilitarios/tipografia.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  final emailControlador = TextEditingController();
+  final senhaControlador = TextEditingController();
+
+  void fazerLogin() {
+    if (emailControlador.text != "teste@email.com" ||
+        senhaControlador.text != "123456") {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Email e/ou senhas estão incorretos")),
+      );
+
+      return;
+    }
+
+    Navigator.push(context, MaterialPageRoute(builder: (build) => Dashboard()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +56,7 @@ class Login extends StatelessWidget {
               Text("Email"),
               const SizedBox(height: 4), // Tópico 3
               TextField(
+                controller: emailControlador,
                 // Tópico 4: Estilização do input
                 decoration: InputDecoration(
                   hintText: "exemplo@gmail.com",
@@ -51,6 +74,7 @@ class Login extends StatelessWidget {
               Text("Senha"),
               const SizedBox(height: 4), // Tópico 3
               TextField(
+                controller: senhaControlador,
                 // Tópico 5: Oculta a senha
                 obscureText: true,
                 decoration: InputDecoration(
@@ -80,7 +104,7 @@ class Login extends StatelessWidget {
               SizedBox(
                 height: 48,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: fazerLogin,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
                     foregroundColor: Colors.white,
