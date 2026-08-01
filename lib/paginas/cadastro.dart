@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:primeiro_app/utilitarios/tipografia.dart';
 
-
 class Cadastro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

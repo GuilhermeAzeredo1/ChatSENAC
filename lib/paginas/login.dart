@@ -21,8 +21,10 @@ class _LoginState extends State<Login> {
 
       return;
     }
-
-    Navigator.push(context, MaterialPageRoute(builder: (build) => Dashboard()));
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (build) => Dashboard()),
+    );
   }
 
   @override
