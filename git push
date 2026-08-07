@@ -1,0 +1,11 @@
+[33mca2a90d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m cria construtor para as páginas de login e cadastro
+[33m3e03861[m[33m ([m[1;31morigin/main[m[33m)[m modifica push do navigator para o dashboard
+[33m7fc1a8c[m cria função 'fazerLogin'
+[33m3aaa5a7[m cria funcionalidade na navegação
+[33mc7a161e[m cria página de cadastro
+[33mb9f4fa7[m cria bícone de visibilidade
+[33m970dd83[m refatora o código da tela de login
+[33m6379972[m finaliza a tela
+[33m72e9106[m cria pasta assets e fonte inter
+[33m42cb2d7[m Criação da tela de login
+[33m80ecd7c[m primeiro commit
